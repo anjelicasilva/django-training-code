@@ -22,8 +22,8 @@ from myapp import views
 
 urlpatterns = [
     re_path(r'^$',views.CBView.as_view()),
-    re_path(r'^user_auth/$',views.UserAuthView.as_view(),name='UserAuthView'),
-    re_path(r'^myapp',include('myapp.urls',namespace='myapp')),
+    # re_path(r'^user_auth/$',views.UserAuthView.as_view(),name='UserAuthView'),
+    re_path(r'^myapp/',include('myapp.urls',namespace='myapp')),
     path('admin/', admin.site.urls),
 ]
 
